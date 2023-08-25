@@ -35,9 +35,22 @@
 <script>
 export default {
   name: 'HelloWorld',
+  data() {
+    return {
+      base_url: process.env.BASE_URL
+    }
+  },
+  mounted() {
+    console.log(process.env.VUE_APP_BASE_URL)
+    console.log(process.env.VUE_APP_TITLE)
+    console.log(process.env.VUE_APP_VERSION)
+    console.log(process.env.NODE_ENV)
+    console.log(process.env.VUE_APP_SECRET_API_KEY)
+  },
   props: {
     msg: String
   }
+  
 }
 </script>
 
